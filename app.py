@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 # pip install streamlit pandas
- Initialize Data Store
+# Initialize Data Store
 if 'data' not in st.session_state:
     st.session_state.data = pd.DataFrame(columns=["Student", "Grade"])
     
