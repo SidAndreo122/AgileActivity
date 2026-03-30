@@ -15,11 +15,11 @@ def calculate_stats(df):
     low = df["Grade"].min()
     return avg, high, low
 
-
+# Sorts the grades into letters
 def get_grade_distribution(df):
     """Categorizes grades into letter brackets for plotting."""
     if df.empty:
         return pd.Series(dtype=int)
-    bins = [0, 60, 70, 80, 90]
+    bins = [0, 60, 70, 80, 90, 100]
     labels = ['F', 'D', 'C', 'B', 'A']
     return pd.cut(df['Grade'], bins=bins, labels=labels).value_counts().sort_index()
