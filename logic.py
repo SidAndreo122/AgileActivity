@@ -16,10 +16,10 @@ def calculate_stats(df):
     return avg, high, low
 
 
-def: get_grade_distribution(df)
-        """Categorizes grades into letter brackets for plotting."""
+def get_grade_distribution(df):
+    """Categorizes grades into letter brackets for plotting."""
     if df.empty:
         return pd.Series(dtype=int)
     bins = [0, 60, 70, 80, 90]
     labels = ['F', 'D', 'C', 'B', 'A']
-    return pd.cut(df['Grade'], bins=bins, labels=# placeholder).value_counts().sort_index()
+    return pd.cut(df['Grade'], bins=bins, labels=labels).value_counts().sort_index()
